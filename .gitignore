@@ -1,0 +1,10 @@
+输出/
+素材/
+*.mp4
+*.MOV
+*.mov
+*.MP3
+*.mp3
+*.wav
+*.DS_Store
+__pycache__/
