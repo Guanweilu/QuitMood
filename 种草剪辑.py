@@ -586,15 +586,8 @@ def main():
     mode_config = MODES[mode_key]
     print(f"模式: {mode_config['name']}")
 
-    # 语音识别生成字幕
+    # 字幕默认关闭，手动加更好控制
     srt_path = None
-    if audio_path and not no_subs:
-        srt_path = os.path.join(输出目录, "_auto_subs.srt")
-        generated = generate_srt_from_audio(audio_path, srt_path)
-        if not generated:
-            srt_path = None
-    elif audio_path and no_subs:
-        print("字幕: 已跳过（--no-subs）")
 
     if os.path.isdir(input_path):
         results = run_folder(input_path, mode_config, count=count,
